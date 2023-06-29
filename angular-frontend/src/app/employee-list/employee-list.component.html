@@ -1,0 +1,82 @@
+<h2 class="page-title">Employee List</h2>
+
+<div class="table-container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email Id</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of employees">
+        <td>{{ employee.firstName }}</td>
+        <td>{{ employee.lastName }}</td>
+        <td>{{ employee.emailId }}</td>
+        <td>
+          <button class="action-button view" (click)="employeeDetails(employee.id)">View</button>
+          <button class="action-button update" (click)="updateEmployee(employee.id)">Update</button>
+          <button class="action-button delete" (click)="deleteEmployee(employee.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<style>
+    .page-title {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.table-container {
+  margin-top: 20px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  text-align: left;
+}
+
+.action-button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.action-button.view {
+  background-color: #4285f4;
+  color: #fff;
+}
+
+.action-button.update {
+  background-color: #2ecc71;
+  color: #fff;
+}
+
+.action-button.delete {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+.action-button:not(:last-child) {
+  margin-right: 5px;
+}
+
+</style>

@@ -1,0 +1,73 @@
+<div class="employee-details">
+    <h3 class="page-title">View Employee Details</h3>
+  
+    <div class="detail-row">
+      <label class="detail-label">First Name:</label>
+      <span class="detail-value">{{ employee.firstName }}</span>
+    </div>
+  
+    <div class="detail-row">
+      <label class="detail-label">Last Name:</label>
+      <span class="detail-value">{{ employee.lastName }}</span>
+    </div>
+  
+    <div class="detail-row">
+      <label class="detail-label">Email ID:</label>
+      <span class="detail-value">{{ employee.emailId }}</span>
+    </div>
+
+
+  <button class="go-back-button" (click)="goBack()">Go Back</button>
+
+  </div>
+  
+<style>
+.employee-details {
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.page-title {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.detail-row {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.detail-label {
+  flex-basis: 120px;
+  font-weight: bold;
+  color: #555;
+}
+
+.detail-value {
+  color: #333;
+}
+
+.go-back-button {
+  background-color: #4285f4;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  text-align: center;}
+
+.go-back-button:hover {
+  background-color: #1a73e8;
+}
+
+
+</style>  
